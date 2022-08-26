@@ -1,7 +1,6 @@
 {
   "name": "channel-engine",
   "version": "0.1.0",
-  "homepage": "https://github.com/abunich/channel-engine.git",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -13,6 +12,8 @@
     "@types/react-dom": "^18.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-query": "^3.39.2",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "sass": "^1.54.5",
     "typescript": "^4.7.4",
