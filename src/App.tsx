@@ -18,7 +18,6 @@ const App: React.FC = () => {
             <Route path={DETAILS_URL} element={<Details />} />
           </Routes>
         </BrowserRouter>
-        ,
       </main>
       <Footer />
     </>
