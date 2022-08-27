@@ -1,0 +1,15 @@
+@import "src/utils/variables";
+
+.switch-filter {
+  & > .Mui-checked {
+    &.MuiSwitch-switchBase {
+      color: $primary-color;
+    }
+  }
+}
+
+.switch-label {
+    & > .MuiFormControlLabel-label {
+        color: $primary-color;
+    }
+}

@@ -3,10 +3,16 @@
 .overview {
     display: flex;
     flex-direction: column;
+    height: 100%;
+
+    &__top-bar {
+        display: flex;
+        padding: 1rem 2rem 0;
+        justify-content: space-between;
+    }
 
     &__title {
         font-weight: bold;
-        padding: 1rem 2rem 0;
         color: $primary-color;
     }
 
@@ -14,7 +20,9 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
         padding: 1rem 4rem;
         margin: 0 auto;
+        height: 100%;
     }
 }
