@@ -1,6 +1,6 @@
 import React from "react";
 import { AlternateEmail as EmailIcon, Phone as PhoneIcon } from "@mui/icons-material";
-import { Id, Email, Phone, OrderDate, CurrencyCode } from "src/models/Content";
+import { Email, Phone, OrderDate, CurrencyCode } from "src/models/Content";
 import { OrderStatus } from "src/models/enums";
 import { getRequiredTimeFormat } from "src/utils/helpers";
 import { DataItem } from "./components/DataItem/DataItem";
@@ -15,7 +15,6 @@ const resources = {
 
 export declare namespace OrderOverview {
   interface Props {
-    id: Id;
     email: Email;
     phone: Phone;
     orderDate: OrderDate;
@@ -25,7 +24,6 @@ export declare namespace OrderOverview {
 }
 
 export const OrderOverview: React.FC<OrderOverview.Props> = ({
-  id,
   email,
   phone,
   orderDate,
