@@ -15,7 +15,7 @@ const App: React.FC = () => {
         <BrowserRouter>
           <Routes>
             <Route path={OVERVIEW_URL} element={<Overview />} />
-            <Route path={DETAILS_URL} element={<Details />} />
+            <Route path={`${DETAILS_URL}/:id`} element={<Details />} />
           </Routes>
         </BrowserRouter>
       </main>

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { CircularProgress as Loader } from "@mui/material";
 import { useOrders } from "src/hooks/useOrders";
 import { OrderOverview } from "src/components/OrderOverview/OrderOverview";
 import { SwitchFilter } from "src/components/SwitchFilter/SwitchFilter";
 import { getRequiredOverviewProps, getTitle } from "./helpers";
+import { DETAILS_URL } from "src/utils/paths";
 import "./Overview.scss";
 
 export const Overview: React.FC = () => {
@@ -35,7 +37,9 @@ export const Overview: React.FC = () => {
 
     const getItems = () =>
       data?.Content.map((order) => (
-        <OrderOverview key={order.Id} {...getRequiredOverviewProps(order)} />
+        <Link className="overview__link" key={order.Id} to={`${DETAILS_URL}/${order.Id}`}>
+          <OrderOverview {...getRequiredOverviewProps(order)} />
+        </Link>
       ));
 
     return getItems();
@@ -44,11 +48,6 @@ export const Overview: React.FC = () => {
   return (
     <div className="overview">
       {getTitleBlock()}
-      {/* <div className="overview__top-bar">
-        <h2 className="overview__title">{getTitleBlock()}</h2>
-
-        <SwitchFilter status={isNewStatus} setStatus={setIsNewStatus} />
-      </div> */}
 
       <div className="overview__content">{getContent()}</div>
     </div>

@@ -4,6 +4,8 @@ import { ORDERS_URL, NEW_ORDERS_URL } from "src/utils/urls";
 import { requestService } from "src/services/RequestService";
 import { Response as ResponseModel } from "src/models/Response";
 
+export const QUERY_NAME = "orders";
+
 const queryOptions = {
     refetchOnWindowFocus: false,
     retry: false,
@@ -23,7 +25,7 @@ export const useOrders = (
     isNewStatus = false,
 ): UseQueryResult<ResponseModel> =>
     useQuery(
-        ["orders", { isNewStatus }],
+        [QUERY_NAME, { isNewStatus }],
         ({ signal }) => fetchOrders(isNewStatus, signal),
         queryOptions,
     );
