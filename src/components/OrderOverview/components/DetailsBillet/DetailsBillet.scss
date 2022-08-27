@@ -1,0 +1,11 @@
+@import "src/utils/variables";
+
+.details-billet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $primary-color;
+
+    padding: 1rem;
+    border: 1px solid $primary-color;
+}

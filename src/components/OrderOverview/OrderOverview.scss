@@ -1,0 +1,55 @@
+@import "src/utils/variables";
+
+.order-overview {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    width: 14rem;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 0 0 0;
+    }
+
+    &__date {
+        flex-direction: column;
+    }
+
+    &__status {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    &__icon {
+        color: $primary-color;
+    }
+
+    &__currency {
+        justify-content: end;
+    }
+
+    &__date, &__currency {
+        margin-top: 1rem;
+
+        & > * {
+            &:last-child {
+                font-weight: bold;
+                color: $primary-color;
+            }
+        }
+    }
+
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+        & .details-billet {
+            display: flex;
+        }
+    }
+}

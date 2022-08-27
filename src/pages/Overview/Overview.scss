@@ -1,0 +1,20 @@
+@import "src/utils/variables";
+
+.overview {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        font-weight: bold;
+        padding: 1rem 2rem 0;
+        color: $primary-color;
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 1rem 4rem;
+        margin: 0 auto;
+    }
+}

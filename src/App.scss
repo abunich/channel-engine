@@ -1,9 +1,12 @@
+@import "src/utils/variables";
+
 header, footer {
-    height: 50px;
     width: 100%;
-    background: blue;
+    background: $primary-color;
+    flex: 0 0 50px;
 }
 
 main {
-    flex: 1 0 auto;
+    flex: 1;
+    overflow: auto;
 }

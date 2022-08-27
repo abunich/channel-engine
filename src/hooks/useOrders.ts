@@ -2,7 +2,7 @@ import { useQuery, UseQueryResult } from "react-query";
 
 import { ORDERS_URL } from "src/utils/urls";
 import { requestService } from "src/services/RequestService";
-import {} from "src/models/Response";
+import { Response as ResponseModel } from "src/models/Response";
 
 const queryOptions = {
     refetchOnWindowFocus: false,
@@ -20,7 +20,7 @@ const fetchOrders = async (
 
 export const useOrders = (
     filters = {},
-): UseQueryResult<Response> =>
+): UseQueryResult<ResponseModel> =>
     useQuery(
         ["orders", { filters }],
         ({ signal }) => fetchOrders(filters, signal),

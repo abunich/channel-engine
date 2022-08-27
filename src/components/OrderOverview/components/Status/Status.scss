@@ -1,0 +1,13 @@
+@import "src/utils/variables";
+
+.status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $primary-color;
+    background: white;
+
+    padding: 0.5rem;
+    color: $primary-color;
+    text-transform: uppercase;
+}

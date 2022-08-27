@@ -1,0 +1,20 @@
+@import "src/utils/variables";
+
+.order-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 74%);
+    height: 14rem;
+    position: relative;
+
+    &__icon {
+        color: $primary-color;
+    }
+
+    &__billet {
+        display: none;
+        position: absolute;
+        bottom: 0.5rem;
+    }
+}

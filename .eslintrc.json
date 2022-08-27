@@ -17,6 +17,7 @@
     "plugins": ["react", "react-hooks", "@typescript-eslint"],
     "rules": {
         "react/react-in-jsx-scope": "off",
+        "@typescript-eslint/no-namespace": "off",
         "spaced-comment": "error",
         "quotes": ["error", "double"],
         "no-duplicate-imports": "error"

@@ -64,8 +64,14 @@ type ContentExtraData = {
   additionalProp3: string;
 };
 
+export type Id = number;
+export type OrderDate = string;
+export type Email = string;
+export type Phone = string;
+export type CurrencyCode = string;
+
 export interface Content {
-  Id: number;
+  Id: Id;
   ChannelName: string;
   ChannelId: number;
   GlobalChannelName: string;
@@ -94,14 +100,14 @@ export interface Content {
   OriginalTotalVat: number;
   Lines: Lines[];
   ShippingCostsInclVat: number;
-  Phone: string;
-  Email: string;
+  Phone: Phone;
+  Email: Email;
   CompanyRegistrationNo: string;
   VatNo: string;
   PaymentMethod: string;
   PaymentReferenceNo: string;
-  CurrencyCode: string;
-  OrderDate: string;
+  CurrencyCode: CurrencyCode;
+  OrderDate: OrderDate;
   ChannelCustomerNo: string;
   ExtraData: ContentExtraData;
 }
