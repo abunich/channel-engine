@@ -21,13 +21,19 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        flex: 1;
         padding: 1rem 4rem;
         margin: 0 auto;
-        height: 100%;
     }
 
     &__link {
         text-decoration: none;
         color: #000000;
+    }
+
+    &__pagination {
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
 }

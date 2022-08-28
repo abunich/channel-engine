@@ -1,0 +1,34 @@
+@import "src/utils/variables";
+
+.pagination {
+    &__item {
+        width: 1.5rem;
+        height: 1.5rem;
+        color: $primary-color;
+        border: 1px solid $primary-color;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0.5rem;
+        cursor: pointer;
+
+        &:hover {
+            background: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 74%);
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &_active {
+            background: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 74%);
+        }
+
+        &_disabled {
+            color: gray;
+            border-color: gray;
+            pointer-events: none;
+        }
+    }
+}
