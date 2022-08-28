@@ -2,6 +2,17 @@ export const PREV_VALUE = "<";
 export const NEXT_VALUE = ">";
 export const MAX_PAGINATION_ELEMENTS = 3;
 
+type NextPageDisabled = {
+  page: number;
+  maxDisplayedPages: number;
+  value: number;
+  nextArrowValue: number;
+}
+
+export const isPrevArrowDisabled = (page: number, value: number) => page === 1 && value === 0;
+export const isNextArrowDisabled = ({ page, maxDisplayedPages, value, nextArrowValue}: NextPageDisabled) => (page === maxDisplayedPages && value === nextArrowValue);
+
+
 export const getPaginationItemValue = (num: number, nextArrowValue: number) =>
   num === 0 ? PREV_VALUE : num === nextArrowValue ? NEXT_VALUE : num;
 

@@ -23,6 +23,7 @@
 
         &_active {
             background: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 74%);
+            pointer-events: none;
         }
 
         &_disabled {

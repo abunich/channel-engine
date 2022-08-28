@@ -36,17 +36,13 @@ export const Pagination: React.FC<Pagination.Props> = ({
     changePage(newPage);
   };
 
-  const onClick = (e: React.MouseEvent<HTMLLIElement>) => {
-    selectPage(e.currentTarget.value);
-  };
-
   const paginationItems = pagesButtonNumber.map((paginationNumber) => (
     <PaginationItem
       key={paginationNumber}
       page={page}
       pages={pages}
       value={paginationNumber}
-      onClick={onClick}
+      onClick={selectPage}
     />
   ));
 

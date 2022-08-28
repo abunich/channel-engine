@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Pagination /> Render Pagination with active first page 1`] = `
+<ul
+  className="pagination"
+>
+  <li
+    className="pagination__item pagination__item_disabled"
+    data-testid="pagination-item-0"
+    onClick={[Function]}
+    value={0}
+  >
+    &lt;
+  </li>
+  <li
+    className="pagination__item pagination__item_active"
+    data-testid="pagination-item-1"
+    onClick={[Function]}
+    value={1}
+  >
+    1
+  </li>
+  <li
+    className="pagination__item"
+    data-testid="pagination-item-2"
+    onClick={[Function]}
+    value={2}
+  >
+    2
+  </li>
+  <li
+    className="pagination__item"
+    data-testid="pagination-item-3"
+    onClick={[Function]}
+    value={3}
+  >
+    3
+  </li>
+  <li
+    className="pagination__item"
+    data-testid="pagination-item-10"
+    onClick={[Function]}
+    value={10}
+  >
+    &gt;
+  </li>
+</ul>
+`;
+
+exports[`<Pagination /> Render Pagination with active last page 1`] = `
+<ul
+  className="pagination"
+>
+  <li
+    className="pagination__item"
+    data-testid="pagination-item-0"
+    onClick={[Function]}
+    value={0}
+  >
+    &lt;
+  </li>
+  <li
+    className="pagination__item"
+    data-testid="pagination-item-1"
+    onClick={[Function]}
+    value={1}
+  >
+    1
+  </li>
+  <li
+    className="pagination__item"
+    data-testid="pagination-item-2"
+    onClick={[Function]}
+    value={2}
+  >
+    2
+  </li>
+  <li
+    className="pagination__item"
+    data-testid="pagination-item-3"
+    onClick={[Function]}
+    value={3}
+  >
+    3
+  </li>
+  <li
+    className="pagination__item"
+    data-testid="pagination-item-4"
+    onClick={[Function]}
+    value={4}
+  >
+    4
+  </li>
+  <li
+    className="pagination__item pagination__item_active"
+    data-testid="pagination-item-5"
+    onClick={[Function]}
+    value={5}
+  >
+    5
+  </li>
+  <li
+    className="pagination__item pagination__item_disabled"
+    data-testid="pagination-item-6"
+    onClick={[Function]}
+    value={6}
+  >
+    &gt;
+  </li>
+</ul>
+`;
+
+exports[`<Pagination /> Render Pagination with no data 1`] = `null`;

@@ -18,6 +18,7 @@
     "rules": {
         "react/react-in-jsx-scope": "off",
         "@typescript-eslint/no-namespace": "off",
+        "@typescript-eslint/no-empty-function": "off",
         "spaced-comment": "error",
         "quotes": ["error", "double"],
         "no-duplicate-imports": "error"
