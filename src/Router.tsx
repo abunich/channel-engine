@@ -8,6 +8,10 @@ export const Routes: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
+  /** Since we don't have a request for getting data of the separated order,
+   * if an user tries to follow the link directly we will redirect the user
+   * to the overview page, where we get data about all orders. */
+
   useEffect(() => {
     if (location.pathname !== OVERVIEW_URL) {
       navigate(OVERVIEW_URL);
