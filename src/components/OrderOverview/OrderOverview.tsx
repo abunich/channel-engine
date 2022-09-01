@@ -3,7 +3,7 @@ import { AlternateEmail as EmailIcon, Phone as PhoneIcon } from "@mui/icons-mate
 import { Email, Phone, OrderDate, CurrencyCode } from "src/models/Content";
 import { OrderStatus } from "src/models/enums";
 import { getRequiredTimeFormat } from "src/utils/helpers";
-import { DataItem } from "./components/DataItem/DataItem";
+import { DataItem } from "../DataItem/DataItem";
 import { OrderItem } from "./components/OrderItem/OrderItem";
 import "./OrderOverview.scss";
 import { Status } from "./components/Status/Status";
@@ -20,6 +20,8 @@ export declare namespace OrderOverview {
     orderDate: OrderDate;
     currencyCode: CurrencyCode;
     status: OrderStatus;
+    className?: string;
+    isBillet?: boolean;
   }
 }
 
@@ -29,34 +31,31 @@ export const OrderOverview: React.FC<OrderOverview.Props> = ({
   orderDate,
   currencyCode,
   status,
+  className = "",
+  isBillet,
 }) => {
   return (
-    <article className="order-overview">
-      <OrderItem />
+    <article className={`order-overview ${className}`}>
+      <OrderItem isBillet={isBillet} />
 
       <Status className="order-overview__status" status={status} />
 
       <div className="order-overview__content">
-        <DataItem>
-          <EmailIcon className="order-overview__icon" />
+        <DataItem title={<EmailIcon />}>{email}</DataItem>
 
-          {email}
+        <DataItem title={<PhoneIcon />}>{phone}</DataItem>
+
+        <DataItem title={resources.orderDate} className="order-overview__date" isReversedColors>
+          {getRequiredTimeFormat(orderDate)}
         </DataItem>
 
-        <DataItem>
-          <PhoneIcon className="order-overview__icon" /> {phone}
-        </DataItem>
-
-        <DataItem className="order-overview__date">
-          <span>{resources.orderDate}</span>
-
-          <span>{getRequiredTimeFormat(orderDate)}</span>
-        </DataItem>
-
-        <DataItem className="order-overview__currency">
-          <span>{resources.currency}:</span>
-
-          <span>{currencyCode}</span>
+        <DataItem
+          title={resources.currency}
+          className="order-overview__currency"
+          isColon
+          isReversedColors
+        >
+          {currencyCode}
         </DataItem>
       </div>
     </article>
