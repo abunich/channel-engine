@@ -1,0 +1,10 @@
+@import "src/utils/variables";
+
+.order-table {
+    &__row {
+        & .MuiTableCell-root {
+            color: $primary-color;
+            font-weight: bold;
+        }
+    }
+}
