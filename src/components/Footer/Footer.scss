@@ -1,0 +1,10 @@
+@import "src/utils/variables";
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 2rem;
+    text-transform: uppercase;
+    color: $white-color;
+}
