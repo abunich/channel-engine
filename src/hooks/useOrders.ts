@@ -14,7 +14,7 @@ const queryOptions = {
 const fetchOrders = async (
     isNewStatus: boolean,
     signal?: AbortSignal,
-): Promise<Response> => {
+): Promise<ResponseModel> => {
     const localUrl = isNewStatus ? NEW_ORDERS_URL : ORDERS_URL;
     const url = requestService.addQueryParams(localUrl, {});
 

@@ -1,10 +1,8 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Overview } from "./pages/Overview/Overview";
-import { Details } from "./pages/Details/Details";
+import { BrowserRouter } from "react-router-dom";
 import { Header } from "./components/Header/Header";
 import { Footer } from "./components/Footer/Footer";
-import { OVERVIEW_URL, DETAILS_URL } from "./utils/paths";
+import { Routes } from "./Router";
 import "./App.scss";
 
 const App: React.FC = () => {
@@ -13,10 +11,7 @@ const App: React.FC = () => {
       <Header />
       <main>
         <BrowserRouter>
-          <Routes>
-            <Route path={OVERVIEW_URL} element={<Overview />} />
-            <Route path={`${DETAILS_URL}/:id`} element={<Details />} />
-          </Routes>
+          <Routes />
         </BrowserRouter>
       </main>
       <Footer />

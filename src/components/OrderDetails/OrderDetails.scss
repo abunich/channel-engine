@@ -1,0 +1,41 @@
+@import "src/utils/variables";
+
+.order-details {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__title {
+        text-align: center;
+        margin: 0 0 1rem 0;
+        color: $primary-color;
+        font-size: 1.6rem;
+    }
+
+    &__table {
+        margin: 0 0 1rem 0;
+    }
+    
+    &__addresses {
+        display: flex;
+        width: 100%;
+
+        & > * {
+            flex: 1 1 auto;
+            margin: 0 1rem 0 0;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+        @media screen and (max-width: 968px) {
+            flex-direction: column;
+
+            & > * {
+                margin: 0 0 1rem 0;
+            }
+        }
+    }
+}

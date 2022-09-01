@@ -10,7 +10,7 @@ type StockLocation = {
   Name: string;
 };
 
-interface Lines {
+export interface Lines {
   Status: OrderStatus;
   IsFulfillmentByMarketplace: boolean;
   Gtin: string;
@@ -40,7 +40,7 @@ interface Lines {
   ExpectedDeliveryDate: string;
 }
 
-type Address = {
+export type Address = {
   Line1: string;
   Line2: string;
   Line3: string;

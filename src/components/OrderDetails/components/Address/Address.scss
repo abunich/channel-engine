@@ -1,0 +1,16 @@
+@import "src/utils/variables";
+
+.address {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    overflow: hidden;
+
+    &__title {
+        margin: 0 0 1rem 0;
+        color: $primary-color;
+        text-align: center;
+    }
+}

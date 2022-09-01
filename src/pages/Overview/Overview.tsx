@@ -42,12 +42,10 @@ export const Overview: React.FC = () => {
       return <Loader />;
     }
 
-    console.log("pageNumber", pageNumber);
-
     const getItems = () =>
       data?.Content.slice(getFromIndex(pageNumber), pageNumber * PAGE_LIMIT).map((order) => (
         <Link className="overview__link" key={order.Id} to={`${DETAILS_URL}/${order.Id}`}>
-          <OrderOverview {...getRequiredOverviewProps(order)} />
+          <OrderOverview {...getRequiredOverviewProps(order)} isBillet />
         </Link>
       ));
 

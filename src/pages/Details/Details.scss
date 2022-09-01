@@ -1,10 +1,54 @@
+@import "src/utils/variables";
+
 .details {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+    flex-direction: column;
+    padding: 2rem;
+    margin: 0 auto;
+
+    &__content {
+        display: flex;
+    }
+    
+    &__card {
+        flex: 1 1 30%;
+        display: flex;
+        border-right: 1px solid $shadow;
+        justify-content: center;
+    }
+
+    &__info {
+        flex: 1 1 70%;
+        padding: 2rem;
+    }
+
+    &__canvas {
+        box-shadow: $shadow;
+        height: 100%;
+    }
+
+    &__overview {
+        width: 70%;
+
+        & .data-item {
+            justify-content: center;
+            margin: 0 0 0.75rem 0
+        }
+    }
 
     &__error {
         font-size: 2rem;
+        text-align: center;
+    }
+
+    @media screen and (max-width: 768px) {
+        &__content {
+            flex-direction: column;
+        }
+
+        &__card {
+            border-right: none;
+            border-bottom: 1px solid $border-color;
+        }
     }
 }

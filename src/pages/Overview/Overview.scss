@@ -29,6 +29,11 @@
     &__link {
         text-decoration: none;
         color: #000000;
+        cursor: pointer;
+
+        & > *:hover {
+            box-shadow: $shadow;
+        }
     }
 
     &__pagination {

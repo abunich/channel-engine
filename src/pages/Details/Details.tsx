@@ -1,6 +1,10 @@
 import React from "react";
+import { Link, useParams } from "react-router-dom";
 import { useFetchOrder } from "src/hooks/useFetchOrder";
-import { useParams } from "react-router-dom";
+import { OrderOverview } from "src/components/OrderOverview/OrderOverview";
+import { OrderDetails } from "src/components/OrderDetails/OrderDetails";
+import { PreviousButton } from "src/components/PreviousButton/PreviousButton";
+import { OVERVIEW_URL } from "src/utils/paths";
 import "./Details.scss";
 
 const resources = {
@@ -16,10 +20,32 @@ export const Details: React.FC = () => {
       return <p className="details__error">{resources.error}</p>;
     }
 
-    return <p>Details</p>;
+    return (
+      <div className="details__content">
+        <section className="details__card">
+          <OrderOverview
+            className="details__overview"
+            email={data.Email}
+            phone={data.Phone}
+            orderDate={data.OrderDate}
+            currencyCode={data.CurrencyCode}
+            status={data.Status}
+          />
+        </section>
+        <section className="details__info">
+          <OrderDetails data={data} />
+        </section>
+      </div>
+    );
   };
 
-  console.log("data", data);
+  return (
+    <div className="details">
+      <Link to={OVERVIEW_URL}>
+        <PreviousButton />
+      </Link>
 
-  return <div className="details">{getContent()}</div>;
+      {getContent()}
+    </div>
+  );
 };
