@@ -1,0 +1,33 @@
+@import "src/utils/variables";
+
+.data-item {
+    display: flex;
+    align-items: center;
+
+    margin: 0 0 0.75rem 0;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &__title {
+        margin: 0 0.25rem 0 0;
+        color: $primary-color;
+    }
+
+    &__content {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &_reversed-colors {
+        & .data-item__title {
+            color: #000000;
+        }
+
+        & .data-item__content {
+            color: $primary-color;
+            font-weight: bold;
+        }
+    }
+}
