@@ -9,7 +9,10 @@
 }
 
 .switch-label {
-    & > .MuiFormControlLabel-label {
+    &.MuiFormControlLabel-labelPlacementEnd {
+      margin-right: 0;
+    }
+    & .MuiFormControlLabel-label {
         color: $primary-color;
     }
 }
