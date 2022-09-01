@@ -1,0 +1,10 @@
+@import "src/utils/variables";
+
+.previous-button {
+    height: 3rem;
+    width: 3rem;
+
+    &.MuiIconButton-root {
+        color: $primary-color;
+    }
+}
